@@ -44,8 +44,9 @@ class Cars extends Component{
 
       const car = this.state.carList.map(car => {
         return (
-          <div>
-            <Car license_plate={car.license_plate}
+          <div key={car.id}>
+            <Car 
+            license_plate={car.license_plate}
             seat_count={car.seat_count}
             convertible={car.convertible}
             engine_type={car.engine_type}

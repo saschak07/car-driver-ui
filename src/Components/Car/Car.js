@@ -1,14 +1,28 @@
 import React from 'react'
 import './Car.css'
+import personImage from '../../../public/extras/multiple-users-silhouette.svg'
+import carImage from '../../../public/extras/car.svg'
 
 const car = (props) => {
     return (<div className="carDetails">
-        <p className="carheading">{props.license_plate}</p>
-        <p className="car">Seat occupancy: {props.seat_count}</p>
-        <p className="car">Car is convertible: {props.convertible}</p>
-        <p className="car">Car Engine: {props.engine_type}</p>
-        <p className="car">Manufacturer: {props.manufacturer}</p>
-        <p className="car">Rating: {props.rating}</p>
+        <div className="info">
+            <img className="carImage" src={carImage} alt=""/>
+        <p className="car"> {props.manufacturer}</p>
+        </div>
+
+        <div className="info">
+        <h1>  {props.license_plate}</h1>
+        <p className="car">ENGINE: {props.engine_type}</p>
+        </div>
+        <div className="info">
+        <p className="car">
+        <img className="personImage" src={personImage} alt=""/> {props.seat_count}
+        </p>
+        </div>
+        <div className="car_button">
+            <button >Assign a Driver</button>
+        </div>
+        
     </div>)
 }
 
