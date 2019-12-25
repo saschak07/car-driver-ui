@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-
+import './Cockpit.css'
 class Cockpit extends Component {
 
 state = {
@@ -29,13 +29,14 @@ render(){
     //let driverselectionList = null;
     console.log(this.state.openedSideBar)
     if(!this.state.openedSideBar){
-        sideBar =  <div className="w3-teal">
+        sideBar =  <div className="w3-teal cockpitContainer">
         <button className="w3-button w3-teal w3-xlarge" onClick={this.sideBartoggleHandler}
         style={{float:'left'}}>☰</button>
         <div className="w3-container">
             <div style={{float:'left'}} ><h1>Kuber Cars</h1></div>
         </div>
     </div>
+   
     }
    else if(this.state.openedSideBar && this.state.openDriverSelectionType){
         

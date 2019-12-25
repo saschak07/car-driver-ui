@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Cockpit from './Components/Cockpit/Cockpit'
-import Cars from './Containers/Cars';
+import Cars from './Containers/Cars/Cars';
 class App extends Component {
   state = {
     isCarDetailsSelected:true,
