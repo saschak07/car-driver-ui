@@ -1,0 +1,45 @@
+.driverDetails{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    margin-top: 16px;
+    margin-bottom: 16px; 
+    padding: 0.01em 16px;
+    box-sizing: inherit;
+    background-color: darkgray; 
+    width : 90%;
+    display: inline-block;
+    position: inherit;
+}
+
+.driverheading{
+    text-align: left;
+    font-weight: bold;
+    padding-right: inherit
+}
+
+.driver{
+    text-align: left;
+    padding-right: inherit
+}
+
+.personImage{
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding-top: 20%;
+}
+.info{
+    float: left;
+    padding-top: 5%;
+    padding-right: 20%;
+}
+.driverImage{
+    float: left;
+    width: 50px;
+    height: 60px;
+    padding-top: 20%;
+}
+.driver_button{
+    float: right;
+    padding-top: 2%;
+    padding-bottom: 2%; 
+}

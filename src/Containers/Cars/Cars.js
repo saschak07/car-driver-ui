@@ -3,9 +3,12 @@ import Car from '../../Components/Car/Car'
 
 import axios from '../../axios'
 import './Cars.css'
+import Modal from '../../Components/Modal/Modal'
 class Cars extends Component{
     state = {
-        carList : []
+        carList : [],
+        showModal: false,
+        selactedcarId: null
     }
 
     componentDidMount(){
@@ -20,8 +23,20 @@ class Cars extends Component{
       
     }
 
+     HandleDriverSelection = (license_plate) =>{
+      this.setState({showModal:true});
+      this.setState({selactedcarId:license_plate})
+      console.log(license_plate)
+    }
+      HandleCancelSelection = () =>{
+        this.setState({showModal:false});
+      }
+
     render(){
 
+      const modal= this.state.showModal?<div><Modal show={this.state.showModal}
+      close={this.HandleCancelSelection}
+      license_plate={this.state.selactedcarId}/></div>:null;
       const car = this.state.carList.map(car => {
         return (
           <div key={car.id}>
@@ -32,12 +47,14 @@ class Cars extends Component{
             engine_type={car.engine_type}
             manufacturer={car.manufacturer}
             rating={car.rating}
+            click={(event) => {this.HandleDriverSelection(car.license_plate)}}
             />
           </div>
         )
       })
         return(<div className='CarListContainer'>
             {car}
+            {modal}
         </div>);
     }
 }

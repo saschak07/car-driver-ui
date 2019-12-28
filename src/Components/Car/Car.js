@@ -20,7 +20,7 @@ const car = (props) => {
         </p>
         </div>
         <div className="car_button">
-            <button >Assign a Driver</button>
+            <button onClick={props.click}>Assign a Driver</button>
         </div>
         
     </div>)
